@@ -1,33 +1,28 @@
 import { useEffect, useState } from "react"
 
-const useThrottle = (d?: number) => {
+const useThrottle = (
+  d?: number
+): [(f: any) => void, React.Dispatch<React.SetStateAction<number>>] => {
   const [timer, setTimer] = useState<ReturnType<typeof setTimeout> | null>(null)
-
   const [defaultDelay, setDelay] = useState<number>(1000)
 
-  const throttleFunc = (
-    f: () => void,
-    delay?: number
-  ): undefined | [() => void, () => void] => {
+  const throttleFunc = (f: any): undefined | void => {
     if (timer !== null) {
-      console.log("eventfired")
       return
     }
     setTimer(
       setTimeout(() => {
         f()
         setTimer(null)
-      }, delay || defaultDelay)
+      }, d || defaultDelay)
     )
-  }
-  const updateDelay = (d: number) => {
-    return setDelay(d)
   }
 
   useEffect(() => {
-    updateDelay(d!)
+    setDelay(d!)
   }, [d])
-  return [throttleFunc, updateDelay]
+
+  return [throttleFunc, setDelay]
 }
 
 export default useThrottle
