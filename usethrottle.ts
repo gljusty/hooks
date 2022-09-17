@@ -4,7 +4,7 @@ const useThrottle = (
   d?: number
 ): [(f: any) => void, React.Dispatch<React.SetStateAction<number>>] => {
   const [timer, setTimer] = useState<ReturnType<typeof setTimeout> | null>(null)
-  const [defaultDelay, setDelay] = useState<number>(1000)
+  const [delay, setDelay] = useState<number>(1000)
 
   const throttleFunc = (f: any): undefined | void => {
     if (timer) {
@@ -14,7 +14,7 @@ const useThrottle = (
       setTimeout(() => {
         f()
         setTimer(null)
-      }, d || defaultDelay)
+      }, delay)
     )
   }
 
