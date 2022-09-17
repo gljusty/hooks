@@ -7,7 +7,7 @@ const useThrottle = (
   const [defaultDelay, setDelay] = useState<number>(1000)
 
   const throttleFunc = (f: any): undefined | void => {
-    if (timer !== null) {
+    if (timer) {
       return
     }
     setTimer(
