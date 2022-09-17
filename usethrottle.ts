@@ -2,11 +2,14 @@ import { useEffect, useState } from "react"
 
 const useThrottle = (
   d?: number
-): [(f: any) => void, React.Dispatch<React.SetStateAction<number>>] => {
+): [
+  (f: () => void) => undefined | void,
+  React.Dispatch<React.SetStateAction<number>>
+] => {
   const [timer, setTimer] = useState<ReturnType<typeof setTimeout> | null>(null)
   const [delay, setDelay] = useState<number>(1000)
 
-  const throttleFunc = (f: any): undefined | void => {
+  const throttleFunc = (f: () => void): undefined | void => {
     if (timer) {
       return
     }
