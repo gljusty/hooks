@@ -5,31 +5,34 @@ const useLeaderLine = (
     c?: Options
 ): [
     LeaderLine[],
-    () => { (): void; generate(c?: Options): void },
-    React.Dispatch<React.SetStateAction<LeaderLine.Options | undefined>>
+    () => { (): void; generate(_?: Options): void },
+    (_: Options) => void
 ] => {
-    const [config, updateConfig] = useState<Options | undefined>()
+    const [config, updateConfig] = useState<Options>({})
     const [lines, updateLines] = useState<LeaderLine[]>([])
 
     const leaderLineGenerator = () => {
         const generator = () => {}
         generator.generate = (_?: Options) => {
             try {
-                const line = new LeaderLine(_ || config!)
+                const line = new LeaderLine(Object.assign(config, _!) || config)
                 updateLines((prev) => [...prev, line])
-            } catch {
-                //do nothing
+            } catch (e) {
+                console.log(e)
             }
         }
         return generator
     }
 
-    useEffect(() => {
-        c ? updateConfig(c) : console.log('!c')
-    }, [c])
+    const mergeConfig = (_: Options) => {
+        updateConfig(Object.assign(config, _))
+    }
 
-    return [lines, leaderLineGenerator, updateConfig]
+    useEffect(() => {
+        c ? mergeConfig(c) : console.log('!c')
+    }, [])
+
+    return [lines, leaderLineGenerator, mergeConfig]
 }
 
 export default useLeaderLine
-
