@@ -36,3 +36,29 @@ const useLeaderLine = (
 }
 
 export default useLeaderLine
+
+/* Example Usage
+
+ const [lines, generator, mergeConfig] = useLeaderLine({
+        color: `rgba(0,0,0,0.5)`,
+        path: `grid`,
+        startSocket: `bottom`,
+        startPlug: `behind`,
+        endSocket: `top`,
+        endPlug: `arrow2`,
+        hide: true,
+        startSocketGravity: 0,
+        endSocketGravity: 0,
+    })
+    
+const el = document.getElementById('_g')!,
+        el2 = document.getElementById('_i')!,
+        g = generator()
+        
+        g.generate()  <-- generates with pre-existing config
+        g.generate({ <-- merges new settings with existing config
+            start: el2,
+            end: el,
+            color: `black`,
+        })
+*/
