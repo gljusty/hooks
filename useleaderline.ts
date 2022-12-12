@@ -55,10 +55,9 @@ const el = document.getElementById('_g')!,
         el2 = document.getElementById('_i')!,
         g = generator()
         
-        g.generate()  <-- generates with pre-existing config
-        g.generate({ <-- merges new settings with existing config
+        g.generate()      //generates with pre-existing config
+        g.generate({     
             start: el2,
             end: el,
-            color: `black`,
-        })
+            color: `black`})  //merges new settings with existing config
 */
