@@ -1,0 +1,96 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    preserveAspectRatio="none">
+    <linearGradient id="linearColors2" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(-70)">
+        <stop offset="5%" stop-color="rgba(59,138,241,0.992)"></stop>
+        <stop offset="50%" stop-color="rgba(0,90,224,0.978)"></stop>
+        <stop offset="100%" stop-color="rgba(8,172,172,0.99)"></stop>
+    </linearGradient>
+    <linearGradient id="linearColors3" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(80)">
+        <stop offset="5%" stop-color="rgba(50,145,173,0.99)"></stop>
+        <stop offset="66%" stop-color="#00c9e4"></stop>
+        <stop offset="100%" stop-color="rgba(4,136,136,0.99)"></stop>
+    </linearGradient>
+    <style>
+        circle {
+            animation: shadow 2s forwards;
+            filter: drop-shadow(10px -10px 10px rgba(27, 27, 27, 0.25));
+            transform-origin: center;
+            transition: all 500ms;
+            scale: 0.25;
+
+        }
+
+        .cc {
+            stroke: url(#linearColors3);
+            transform: translate(-2px, 1px);
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotateZ(359deg);
+            }
+        }
+
+
+        @keyframes shadow {
+
+            0%,
+            10% {
+                scale: 0.95;
+                filter: drop-shadow(0px 0px 0px rgba(27, 27, 27, 0.15));
+            }
+
+            90%,
+            100% {
+                scale: 1.0;
+                filter: drop-shadow(10px -10px 10px rgba(27, 27, 27, 0.25));
+            }
+        }
+    </style>
+    <g fill="none" stroke="rgba(20, 117, 173, 0.74)" stroke-width="20">
+
+
+
+
+        <circle r="29" cx="221" cy="267"></circle>
+        <circle r="33" cx="450" cy="73"></circle>
+        <circle r="57" cx="847" cy="409"></circle>
+        <circle r="51" cx="640" cy="64"></circle>
+        <circle r="25" cx="498" cy="467"></circle>
+
+        <circle r="45" cx="840" cy="205"></circle>
+        <circle r="22" cx="98" cy="251"></circle>
+
+        <circle r="31" cx="858" cy="64"></circle>
+
+        <circle r="39" cx="582" cy="188"></circle>
+
+
+        <circle r="38" cx="580" cy="353"></circle>
+
+    </g>
+
+    <g fill="none" stroke-width="20">
+
+
+
+
+        <circle r="29" cx="221" cy="267" class="cc"></circle>
+        <circle r="33" cx="450" cy="73" class="cc"></circle>
+        <circle r="57" cx="847" cy="409" class="cc"></circle>
+        <circle r="51" cx="640" cy="64" class="cc"></circle>
+        <circle r="25" cx="498" cy="467" class="cc"></circle>
+        <circle r="45" cx="840" cy="205" class="cc"></circle>
+        <circle r="22" cx="98" cy="251" class="cc"></circle>
+
+        <circle r="31" cx="858" cy="64" class="cc"></circle>
+
+        <circle r="39" cx="582" cy="188" class="cc"></circle>
+
+
+        <circle r="38" cx="580" cy="353" class="cc"></circle>
+
+
+
+    </g>
+</svg>
