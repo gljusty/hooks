@@ -1,0 +1,37 @@
+<svg id="visual" viewBox="0 0 960 540" height="540" width="960" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <linearGradient id="linearColors2" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(-70)">
+        <stop offset="5%" stop-color="rgba(0,153,255,0.992)"></stop>
+        <stop offset="50%" stop-color="rgba(19,82,177,0.978)"></stop>
+        <stop offset="100%" stop-color="rgba(16,100,255,0.99)"></stop>
+    </linearGradient>
+    <style type="text/css">
+        path {
+            animation: dasher 3s linear forwards;
+            filter: drop-shadow(10px -15px 10px rgba(25, 25, 25, 0.25));
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3000;
+        }
+
+        @keyframes dasher {
+            to {
+                stroke-dashoffset: 200;
+            }
+        }
+    </style>
+
+    <g transform="translate(0 0)">
+        <path
+            d="M667 540L667 491L687 491L687 442L408 442L408 393L610 393L610 344L349 344L349 295L709 295L709 245L721 245L721 196L483 196L483 147L549 147L549 98L258 98L258 49L381 49L381 0"
+            fill="none" stroke-linecap="square" stroke-linejoin="miter" stroke="url(#linearColors2)" stroke-width='10'>
+        </path>
+
+    </g>
+    <g transform="translate(-3 0)">
+        <path
+            d="M667 540L667 491L687 491L687 442L408 442L408 393L610 393L610 344L349 344L349 295L709 295L709 245L721 245L721 196L483 196L483 147L549 147L549 98L258 98L258 49L381 49L381 0"
+            fill="none" stroke-linecap="square" stroke-linejoin="miter" stroke="url(#linearColors2)" stroke-width="10">
+        </path>
+    </g>
+
+</svg>
