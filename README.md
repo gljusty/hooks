@@ -1,2 +1,1 @@
-# hooks
-miscellaneous hooks and other short bits of code
+#miscellaneous hooks and other short bits of code
